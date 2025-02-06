@@ -1,13 +1,13 @@
 from math_functions import *
 
-class gradient_descent:
+class Gradient_descent:
     def __init__(self, learn_rate, max_iter, tolerance):
         self.learn_rate = learn_rate
         self.max_iter = max_iter
         self.tolerance = tolerance
         self.history = []
 
-    def fit(self, cost_function, params):
+    def fit(self, cost_function, params, scale_data = False):
         # to make the gradient descent applicable for different functions you have to pass the initial parameters
         if not isinstance(params, list) or not params:
             raise ValueError("You must provide a list of initial parameters.")
