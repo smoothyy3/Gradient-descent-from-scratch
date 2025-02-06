@@ -9,7 +9,7 @@ def mean(lst) -> float:
 
 # ERROR METRICS: MEAN SQUARED ERROR (MSE)
 def MSE(y_true: list, y_pred: list) -> float:
-    if not y_pred or not y_true:
+    if len(y_pred) == 0 or len(y_true) == 0:
         raise ValueError("Lists cannot be empty")
     
     if len(y_pred) != len(y_true):
