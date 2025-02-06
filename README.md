@@ -31,3 +31,22 @@ Final MSE: 7.5437044725299e-05
 ```For X_test = [[6, 7], [7, 8], [8, 9]] → Predictions = [11.985909892207738, 13.98017599652841, 15.97444210084908]```
 
 <img src="./assets/multi-linear-regression.png" alt="Gradient descent performance">
+
+### Non-linear sigmoid regression
+
+Gradient Descent **optimizes** a sigmoid function of the form: y = a / (1 + exp(-b * (x - c)))
+
+```
+Final MSE: 0.5573858836034409
+```
+
+<img src="./assets/sigmoid-function.png" alt="Gradient descent performance on sigmoid">
+
+### Non-linear logarithmic regression
+
+Gradient Descent **optimizes** a log function of the form: y = a * log(b * x) + c
+
+```
+Final MSE: 1.7408196891677037
+```
+<img src="./assets/log-function.png" alt="Gradient descent performance on log">
