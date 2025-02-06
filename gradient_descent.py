@@ -37,21 +37,3 @@ class gradient_descent:
         if self.optimized_params is None:
             raise ValueError("You must call fit() before predict().")
         return cost_function(self.optimized_params)
-    
-# Kostenfunktion (Ziel: x → 3)
-def cost_function(x):
-    return (x[0] - 3) ** 2  # Quadratische Funktion mit Minimum bei x=3
-
-# Initialisierung des Algorithmus
-gd = gradient_descent(learn_rate=0.1, max_iter=100, tolerance=1e-6)
-
-# Starte mit einem zufälligen Wert für x, z. B. x = 10
-initial_params = [10]
-
-# Starte das Training
-optimized_params = gd.fit(cost_function, initial_params)
-
-# Zeige das Ergebnis
-print("Optimized Parameters:", optimized_params)
-print("Final Cost:", cost_function(optimized_params))
-print("History:", gd.history[-5:])  # Zeigt die letzten 5 Iterationen
